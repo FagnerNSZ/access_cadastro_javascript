@@ -106,7 +106,7 @@
         <div class="col-md-4 order-md-2 mb-4">
           <h4 class="d-flex justify-content-between align-items-center mb-3">
             <span class="text-muted">Usuários</span>
-            <span class="badge badge-secondary badge-pill">3</span>
+            <span class="badge badge-secondary badge-pill" id="quantidade"></span>
           </h4>
 
           <ul class="list-group mb-3" id="usuarios">
@@ -118,8 +118,10 @@
             <div class="input-group">
               <input type="text" class="form-control" placeholder="Promo code">
               <div class="input-group-append">
-                <button type="submit" class="btn btn-secondary">Redeem</button>
+                <button type="submit" id="tags" class="btn btn-secondary">Redeem</button>
+
               </div>
+
             </div>
           </form>
         </div>
@@ -205,22 +207,16 @@
         $("#containerModal").html(Pagina(0));
   </script>
   <script>
-     
-          //document.getElementById("id_edit_user").value  = Pagina(0);
-          //document.getElementById("id_t").value  = Pagina(0);
-          
-          //document.getElementById("firstName1").value = "Johnny Bravo";
-          
-
- /*       function Mudarestado(el) {
-        var display = document.getElementById(el).style.display;
-        if(display == "block"){
-            document.getElementById(el).style.display = 'none';
-          console.log(display);
-            }
-        }*/
+     $("#quantidade").html(QuantidadeRegistros());
   </script>
-
+<script>
+  $( function() {
+    var availableTags = ListarBustaAutocomplete();
+    $( "#tags" ).autocomplete({
+      source: availableTags
+    });
+  } );
+  </script>
 
 
   </body>
