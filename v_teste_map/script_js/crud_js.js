@@ -248,9 +248,9 @@
 			 	//console.log( + RS.fields(0).value + RS.fields(1).value+ RS.fields(2).value);
 	     	i++;
 				ar[i] =  "<li class='list-group-item d-flex justify-content-between'>"+
-                 "<input type='hidden' id='"+RS.fields(0).value +"' name='id_usu"+RS.fields(0).value +"' value='"+RS.fields(0).value +"'>" 
+                 "<input type='hidden' id='"+RS.fields(0).value +"' name='id_usu'"+RS.fields(0).value +"' value='"+RS.fields(0).value +"'>" 
                  +RS.fields(0).value+ RS.fields(1).value+ RS.fields(2).value+"<button type='button' class='btn btn-link' onclick='Delete("+RS.fields(0).value +");'>Excluir</button>"
-						    +"<button type='button' class='btn btn-link' data-toggle='modal' data-target='#myModal' id='"+RS.fields(0).value +"' onclick='Pagina("+RS.fields(0).value +")'>Editar </button></li>'";
+						    +"<button type='button' class='btn btn-link' data-toggle='modal' data-target='#myModal' id='"+RS.fields(0).value +"' onclick='Pagina("+RS.fields(0).value +")'>Editar </button></li>";
                 
 	            RS.MoveNext();
       }
